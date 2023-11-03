@@ -1,0 +1,97 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  padding-bottom: 3rem;
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-grey-light;
+    margin-bottom: 3rem;
+  }
+
+  .avatar {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+
+  .review {
+    width: 100%;
+    display: grid;
+
+    h5 {
+      font-size: 1.7rem;
+    }
+
+    .content {
+      margin-top: 1.5rem;
+    }
+
+    .rating {
+      font-size: 2.5rem;
+    }
+
+    p {
+      width: 60vw;
+      color: $color-grey;
+    }
+  }
+
+  .reviewImg {
+    height: 15rem;
+    margin: 0.5rem;
+  }
+
+  .left {
+    width: 20rem;
+    color: $color-grey;
+
+    .isHelpful {
+      display: flex;
+      margin-top: 2rem;
+
+      .like,
+      .dislike {
+        margin-right: 3rem;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          height: 2.5rem;
+          width: 2.5rem;
+          fill: $color-primary;
+          margin-right: 0.5rem;
+        }
+
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    flex-direction: column;
+
+    .review {
+
+      p {
+        width: 100%;
+        color: $color-grey;
+      }
+    }
+
+    .reviewImg {
+      height: 10rem;
+      margin: 0.5rem;
+    }
+  }
+}

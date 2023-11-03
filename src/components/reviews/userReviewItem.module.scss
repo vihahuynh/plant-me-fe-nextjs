@@ -1,0 +1,61 @@
+@import "./../../styles/variable.module.scss";
+
+.userReviewItem {
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+  font-size: $default-font-size;
+  background-color: white;
+  margin-bottom: 1.2rem;
+  padding: 2rem 4rem;
+  border-radius: 3px;
+  color: $color-grey-dark;
+
+  img {
+    height: 12rem;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  h5 {
+    font-size: $default-font-size;
+    // color: $color-primary;
+  }
+}
+
+.productTitle {
+  color: $color-primary;
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rating {
+  font-size: 2.5rem !important;
+  margin-bottom: 2rem;
+}
+
+.iconBox {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  // margin-top: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: $color-primary;
+  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .userReviewItem {
+    flex-direction: column;
+  }
+}

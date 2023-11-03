@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { alertActions } from "../../store";
-import { Button, Wrapper } from "../../components";
+import { Button } from "../../components";
 
 import { emailService } from "../../services";
 

@@ -7,6 +7,6 @@ export * from "./layout";
 // export * from "./notification";
 // export * from "./order";
 export * from "./products";
-// export * from "./reviews";
+export * from "./reviews";
 // export * from "./stock";
 export * from "./UI";

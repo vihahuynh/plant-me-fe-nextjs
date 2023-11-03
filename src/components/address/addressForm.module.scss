@@ -1,0 +1,148 @@
+@import "./../../styles/variable.module.scss";
+
+.formContainer {
+  margin-top: 4rem;
+  position: relative;
+
+  h5 {
+    color: $color-primary;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .fileInput {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      &::-webkit-file-upload-button {
+        opacity: 0;
+        margin-top: 0.5rem;
+        margin-right: 6rem;
+      }
+
+      &::before {
+        content: "Upload images";
+        font-size: $default-font-size;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 1.5rem;
+        transform: translateY(-50%);
+        background-color: $color-primary;
+        color: $color-primary-light;
+        padding: 0.5rem 1rem;
+        outline: none;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+      &:hover::before {
+        border-color: $color-primary;
+      }
+
+      // color: transparent;
+    }
+
+    .inputContainer {
+      width: 100%;
+      height: fit-content;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    label {
+      color: $color-primary;
+      font-size: $default-font-size;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light;
+      color: $color-grey;
+      background-color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: $default-font-size;
+      transition: all .3s;
+
+      &:active,
+      &:hover {
+        border: 1px solid $color-primary;
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        color: lightgrey;
+        font-size: $default-font-size;
+      }
+    }
+
+    input {
+      display: inline-block;
+      height: 4rem;
+    }
+
+    textarea,
+    select {
+      outline: none;
+      padding: 1rem 1.5rem;
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      display: inline-block;
+      border: none;
+      border-radius: 3px;
+      background-color: $color-primary;
+      color: $color-grey-light;
+      padding: 0.7rem 1.5rem;
+      // text-transform: uppercase;
+      font-size: $default-font-size;
+      margin-bottom: 0.5rem;
+    }
+
+    .errors {
+      margin-top: 3px;
+      margin-left: 1.5rem;
+      font-size: $tiny-font-size;
+      color: darkred;
+    }
+
+    .link {
+      color: $color-primary-dark;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.formBtnGroup {
+  margin-top: 0.5rem;
+  display: flex;
+  column-gap: 1rem;
+}
+
+@media only screen and (max-width: 37.25em) {
+  .formContainer {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,47 @@
+@import "./../../styles/variable.module.scss";
+
+.addressItem {
+  position: relative;
+  border-radius: 3px;
+  background-color: white;
+  padding: 2rem 3rem;
+  margin-bottom: 1rem;
+
+  .addressHeader {
+    margin-bottom: 2rem;
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  .defaultAddress {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    color: orange;
+  }
+
+  span {
+    color: $color-grey;
+  }
+}
+
+.btnGroup {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.unActive {
+  background-color: $color-grey-light;
+}
+
+@media only screen and (max-width: 37.25em) {
+  .btnGroup {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1rem;
+  }
+}

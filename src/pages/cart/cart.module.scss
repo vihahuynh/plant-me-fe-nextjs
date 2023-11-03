@@ -1,0 +1,51 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  margin: 5rem 10rem;
+  display: grid;
+  grid-template-columns: 2fr 0.7fr;
+  font-size: $default-font-size;
+  gap: 3rem;
+}
+
+.infoBox {
+  color: $color-primary;
+  grid-column: 1 / -1;
+  width: 70%;
+  height: 45vh;
+  background-color: $color-primary-light;
+  border: 1px solid $color-grey-light;
+  border-radius: 3px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    margin: 4rem auto 0;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 5rem;
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 31.25em) {
+  .container {
+    margin: 3rem;
+  }
+}

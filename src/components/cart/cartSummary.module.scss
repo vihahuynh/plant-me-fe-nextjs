@@ -1,0 +1,121 @@
+@import "./../../styles/variable.module.scss";
+
+.summary {
+  grid-column: 2 / 3;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  .summaryTop {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .delivery,
+  .orderSummary {
+    background-color: $color-primary-light;
+    padding: 2rem;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .change {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .checkoutBtn {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  h5 {
+    color: $color-primary;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .userInfo {
+    display: flex;
+    font-weight: 600;
+    color: #000;
+
+    p {
+      &:not(:last-child) {
+        border-right: 1px solid $color-grey;
+        padding-right: 1rem;
+      }
+
+      &:not(:first-child) {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .address {
+    color: $color-grey;
+    padding: 0;
+  }
+
+  .total,
+  .subTotal,
+  .shipping {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .totalPrice {
+    color: palevioletred;
+    font-size: 3rem;
+  }
+
+  .summarySubTitle {
+    font-weight: 600;
+  }
+}
+
+.infoText {
+  color: orange;
+  margin-bottom: 1rem;
+  font-size: $default-font-size;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 75em) {
+  .summary {
+    width: 26rem;
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .summary {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+
+    .summaryTop {
+      flex-direction: row;
+    }
+
+    .summaryTop > * {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .summary {
+    .summaryTop {
+      flex-direction: column;
+    }
+
+    // .summaryTop > * {
+    //   width: 100%;
+    // }
+  }
+}

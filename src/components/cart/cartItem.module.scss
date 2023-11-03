@@ -1,0 +1,107 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid $color-grey-light;
+  column-gap: 2rem;
+  padding: 1rem 0;
+  position: relative;
+
+  img {
+    width: 8rem;
+  }
+
+  .quantity,
+  .itemInfo {
+    display: flex;
+    align-items: center;
+  }
+
+  .itemInfo {
+    margin-right: auto;
+
+    img {
+      margin-right: 1rem;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    .itemBuyInfo {
+      width: 50%;
+    }
+
+    .color {
+      margin-left: 1rem;
+      margin-bottom: -2px;
+      display: inline-block;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid $color-grey-dark;
+    }
+  }
+
+  .quantity {
+    width: 55%;
+    gap: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-shrink: 0;
+
+    .totalPrice {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+    height: 2rem;
+    width: 2rem;
+    color: darkred;
+    cursor: pointer;
+  }
+}
+
+.availableQuantity {
+  font-size: 1.2rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .itemInfo {
+      .itemBuyInfo {
+        width: 100%
+      }
+    }
+
+    .quantity {
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .icon {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      flex-shrink: 0;
+      height: 2rem;
+      width: 2rem;
+      color: darkred;
+      cursor: pointer;
+    }
+  }
+}

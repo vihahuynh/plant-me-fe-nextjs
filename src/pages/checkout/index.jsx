@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import _ from "lodash";
 
 import {
+  Wrapper,
   Cart,
   CartSummary,
   AddressForm,

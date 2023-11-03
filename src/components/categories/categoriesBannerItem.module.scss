@@ -1,0 +1,41 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  margin: 0 1rem 1rem;
+
+  .image {
+    width: 20vw;
+  }
+
+  &:hover {
+    .titleContainer {
+      .icon {
+        fill: $color-primary;
+        transform: translateX(1rem);
+      }
+
+      .title {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .titleContainer {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    .title {
+      color: $color-grey-dark;
+      font-size: $small-title-font-size;
+      transition: all 0.3s ease;
+    }
+
+    .icon {
+      font-size: $medium-title-font-size;
+      margin-left: 1rem;
+      fill: $color-grey-dark;
+      transition: all 0.3s ease;
+    }
+  }
+}

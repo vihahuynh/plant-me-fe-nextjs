@@ -1,0 +1,62 @@
+@import "./../../../styles/variable.module.scss";
+
+.container {
+  color: $color-primary;
+  padding: 1rem 2rem;
+
+  .header {
+    font-size: $small-title-font-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .icon {
+      font-size: $medium-title-font-size;
+      fill: $color-primary;
+      transition: all 0.3;
+    }
+
+    .minus::after {
+      transform: rotate(-90deg);
+    }
+
+    span {
+      margin-right: 1.5rem;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -0.9rem;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        width: 2rem;
+        background-color: $color-primary;
+      }
+
+      &::after {
+        position: absolute;
+        top: -0.9rem;
+        content: "";
+        display: inline-block;
+        height: 2rem;
+        width: 2px;
+        background-color: $color-primary;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  .menuContainer {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .active {
+    max-height: 100vh;
+  }
+}

@@ -1,0 +1,93 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  font-size: $default-font-size;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  padding: 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h5 {
+    font-size: 2rem;
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $color-grey;
+  }
+}
+
+.buttonGroup {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.large {
+  width: 60%;
+}
+
+.medium {
+  width: 40%;
+}
+
+.small {
+  width: 30%;
+}
+
+@media only screen and (max-width: 68.75em) {
+  .large {
+    width: 70%;
+  }
+
+  .medium {
+    width: 70%;
+  }
+
+  .small {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .large {
+    width: 90%;
+  }
+
+  .medium {
+    width: 90%;
+  }
+
+  .small {
+    width: 80%;
+  }
+}

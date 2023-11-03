@@ -1,0 +1,119 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  text-align: center;
+
+  section {
+    padding: 4rem 15rem;
+
+    p {
+      font-size: 1.6rem;
+      color: $color-primary;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.headerImg {
+  width: 60%;
+}
+
+.decorateImg {
+  width: 100%;
+}
+
+.introduce {
+  background-color: #f7edee;
+  position: relative;
+
+  img {
+    width: 70%;
+    margin-top: -2rem;
+  }
+}
+
+.history {
+  background-color: $color-primary;
+
+  h2,
+  p {
+    color: $color-primary-light !important;
+  }
+}
+
+.actions,
+.mission {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5rem;
+  // align-items: flex-start;
+
+  p {
+    text-align: start;
+  }
+
+  img {
+    width: 53%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+}
+
+.mission {
+  padding-top: 0 !important;
+}
+
+.people {
+  background-color: $color-grey-light;
+}
+
+.introduce,
+.history {
+  p {
+    padding: 0 35rem;
+  }
+}
+
+@media only screen and (max-width: 90em) {
+  .introduce,
+  .history {
+    p {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    section {
+      padding: 4rem 10rem;
+    }
+  }
+
+  .actions,
+  .mission {
+    flex-direction: column-reverse;
+    row-gap: 4rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .container {
+    section {
+      padding: 4rem 5rem;
+    }
+  }
+
+  .introduce {
+    img {
+      width: 100%;
+    }
+  }
+}

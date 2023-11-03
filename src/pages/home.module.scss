@@ -1,0 +1,21 @@
+@import "./../styles/variable.module.scss";
+
+.container {
+  margin: 7rem 10rem 0;
+
+  section {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    margin: 5rem 7rem 0;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    margin: 2rem 3rem 0;
+  }
+}

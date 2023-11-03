@@ -1,0 +1,149 @@
+@import "./../../../styles/variable.module.scss";
+
+.drawerBtn {
+  cursor: pointer;
+  color: $color-primary-light;
+  font-size: $default-font-size;
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: $color-primary;
+  border-radius: 10rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  .icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary-light;
+    margin-right: 0.5rem;
+  }
+
+  span {
+    margin-top: 2px;
+  }
+}
+
+.container {
+  background-color: $color-primary-light;
+  width: 32rem;
+  height: 100vh;
+  font-size: 1.4rem;
+  position: relative;
+
+  .filters {
+    height: 90vh;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .clear {
+    font-size: 2rem;
+    margin: 0 2rem;
+    color: darkred;
+    cursor: pointer;
+  }
+
+  .selectedFilters {
+    margin: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-grey;
+  }
+
+  ul {
+    list-style: none;
+    margin: 1rem 0 1rem 1rem;
+
+    li {
+      color: $color-grey;
+      font-size: $default-font-size;
+      margin-bottom: 0.5rem;
+
+      .key {
+        font-weight: 600;
+        color: $color-primary;
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: $color-primary-light;
+    background-color: $color-primary;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+
+  .drawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    .title {
+      color: $color-primary-light;
+      font-size: $small-title-font-size;
+    }
+
+    .icon {
+      font-size: $medium-title-font-size;
+      fill: $color-primary-light;
+      cursor: pointer;
+    }
+  }
+
+  .list {
+    list-style: none;
+    padding: 1rem 0;
+
+    li {
+      background-color: white;
+      color: $color-grey-dark;
+      padding: 1.5rem;
+      margin: 1.2rem 2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-primary-light;
+      }
+    }
+
+    li.curOption {
+      background-color: $color-primary;
+      color: $color-primary-light;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    width: 28rem;
+  }
+
+  .buttonText {
+    display: none;
+  }
+
+  .drawerBtn {
+    padding: 0.5rem 1rem;
+
+    .icon {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "./../../styles/variable.module.scss";
+
+.grid {
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+
+  .firstGrid,
+  .secondGrid,
+  .thridGrid {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 2rem 2rem 2rem 4rem;
+
+    h5 {
+      font-size: 2.5rem;
+      color: $color-grey-dark;
+      line-height: 3rem;
+    }
+  }
+
+  .firstGrid {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    background-color: $color-primary-light;
+
+    h5 {
+      font-size: 3rem;
+      color: $color-primary;
+      line-height: 4.5rem;
+    }
+
+    img {
+      height: 70vh;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 68.75em) {
+        height: 40vh
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  .secondGrid {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-color: $color-grey-light;
+
+    img {
+      height: 25vh;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 68.75em) {
+        height: 18vh
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.15);
+    }
+  }
+
+  .thridGrid {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: #f7edee;
+
+    img {
+      height: 25vh;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 68.75em) {
+        height: 18vh
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.15);
+    }
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .grid {
+    grid-template-columns: 1fr;
+
+    .firstGrid,
+    .secondGrid,
+    .thridGrid {
+      grid-column: 1/2;
+      justify-content: space-around;
+
+      img {
+        height: 20vh;
+      }
+    }
+
+    .firstGrid {
+      grid-row: 1/2;
+    }
+
+    .secondGrid {
+      grid-row: 2/3;
+    }
+
+    .thridGrid {
+      grid-row: 3/4;
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .grid {
+
+    .firstGrid,
+    .secondGrid,
+    .thridGrid {
+      justify-content: space-between;
+
+      img {
+        height: 13vh;
+      }
+    }
+  }
+}

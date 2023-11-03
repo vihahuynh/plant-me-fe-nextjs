@@ -1,0 +1,48 @@
+@import "./../../styles/variable.module.scss";
+
+.messageBox {
+  font-size: $default-font-size;
+  padding: 2rem 3rem;
+  position: fixed;
+  z-index: 500;
+  top: 9rem;
+  right: 2rem;
+  border-radius: 5px;
+  animation: popup 0.6s;
+}
+
+.info {
+  background-color: $color-primary-light;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.error {
+  background-color: #f7edee;
+  color: darkred;
+  border: 1px solid darkred;
+}
+
+.warning {
+  background-color: lightyellow;
+  color: orange;
+  border: 1px solid orange;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .messageBox {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+  }
+}

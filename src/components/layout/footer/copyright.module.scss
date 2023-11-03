@@ -1,0 +1,66 @@
+@import "./../../../styles/variable.module.scss";
+
+.container {
+  padding: 0 10rem;
+  background-color: $color-primary-dark;
+  font-size: 1.2rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: $color-primary-light;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.topContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      color: $color-primary-light;
+    }
+  }
+}
+
+@media only screen and (max-width: 58em) {
+  .container {
+    padding: 0 5rem;
+    height: 11rem;
+  }
+
+  .topContainer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .container {
+    height: 12rem;
+    padding: 1.5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    padding: 1.5rem 3rem;
+  }
+}

@@ -1,0 +1,50 @@
+@import "./variable.module.scss";
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  position: absolute;
+  top: 8rem !important;
+  width: 100%;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: $color-primary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56, 25%;
+    top: 6rem !important;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,43 @@
+@import "./../../styles/variable.module.scss";
+
+.accordion {
+  font-size: $default-font-size;
+
+  .header {
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1.5rem 0.5rem;
+    border-bottom: 1px solid $color-grey-light;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      transition: all 0.3s;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  .header.active {
+    // background-color: $color-primary-light;
+
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .content.active {
+    max-height: 100vh;
+  }
+}

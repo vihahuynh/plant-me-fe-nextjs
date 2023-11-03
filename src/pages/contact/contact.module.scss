@@ -1,0 +1,122 @@
+@import "./../../styles/variable.module.scss";
+
+.contactBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  column-gap: 2rem;
+}
+
+.contactInfoList {
+  list-style: none;
+
+  li {
+    font-size: 1.6rem;
+    color: $color-grey-dark;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  span {
+    color: $color-primary;
+    font-weight: 600;
+  }
+}
+
+.formContainer {
+  .form {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+
+    .inputContainer {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    input,
+    textarea {
+      width: 40vw;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light;
+      color: $color-grey;
+      font-family: "Poppins", sans-serif;
+      font-size: $default-font-size;
+      transition: all 0.3s;
+
+      &:active,
+      &:hover {
+        border: 1px solid $color-primary;
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        color: lightgrey;
+        font-size: $default-font-size;
+      }
+    }
+
+    input {
+      height: 4rem;
+    }
+
+    textarea {
+      outline: none;
+      padding: 0.7rem 1.5rem;
+    }
+
+    .btn {
+      align-self: center;
+      border: none;
+      border-radius: 10rem;
+      background-color: $color-primary;
+      color: $color-grey-light;
+      padding: 1rem 3rem;
+      text-transform: uppercase;
+      font-size: $default-font-size;
+    }
+
+    .errors {
+      margin-top: 3px;
+      margin-left: 1.5rem;
+      font-size: $tiny-font-size;
+      color: darkred;
+    }
+
+    .link {
+      color: $color-primary-dark;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contactBox {
+    flex-direction: column;
+    padding: 5rem;
+    row-gap: 2rem;
+  }
+
+  .formContainer {
+    .form {
+      width: 85vw;
+
+      input,
+      textarea {
+        width: 100%
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .contactBox {
+    padding: 3rem;
+  }
+}

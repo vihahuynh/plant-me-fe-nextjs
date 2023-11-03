@@ -1,0 +1,29 @@
+@import "./../../../styles/variable.module.scss";
+
+.container {
+  .title {
+    margin-bottom: 2rem;
+    color: $color-grey-dark;
+    font-size: $default-font-size;
+  }
+
+  .linkList {
+    list-style: none;
+
+    .linkItem {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: $color-grey;
+        text-decoration: none;
+        font-size: $tiny-font-size;
+        transition: all .5s;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+}

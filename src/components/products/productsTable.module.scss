@@ -1,0 +1,57 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  margin: 5rem 10rem;
+  font-size: $default-font-size;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  min-width: 50rem;
+}
+
+.tableHeader {
+  display: table-header-group;
+
+  th {
+    line-height: 1.5rem;
+    display: table-cell;
+    vertical-align: inherit;
+    border-bottom: 1px solid $color-grey-light;
+    text-align: left;
+    padding: 2rem $default-font-size;
+    color: $color-primary;
+  }
+}
+
+.tableRow {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+
+  td {
+    line-height: 1.5;
+    display: table-cell;
+    vertical-align: inherit;
+    border-bottom: 1px solid $color-grey-light;
+    text-align: start;
+    padding: 0.5rem $default-font-size;
+    color: $color-grey;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+}
+
+.img {
+  height: 8rem;
+}
+
+.btnGroup {
+  display: flex;
+  column-gap: 1.5rem;
+}

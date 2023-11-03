@@ -1,0 +1,88 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  height: 65vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.description {
+  color: $color-grey;
+  margin: 1rem;
+
+  .about {
+    margin-bottom: 1rem;
+  }
+
+  .note {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    gap: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    .icon {
+      grid-column: 1 / 2;
+    }
+
+    p {
+      grid-column: 2 / 3;
+    }
+  }
+}
+
+.plantCare,
+.commonProblems,
+.livingConditions,
+.decorTips {
+  margin: 1rem;
+  color: $color-grey;
+
+  .plantCareTip,
+  .problem,
+  .condition,
+  .decorTip {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .plantCareTip,
+  .decorTip {
+
+    h4,
+    p {
+      display: inline;
+    }
+  }
+
+  .condition {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.h4 {
+  color: $color-primary;
+  font-weight: 600;
+}
+
+.icon {
+  color: $color-primary;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 2rem 0;
+    height: auto;
+  }
+}

@@ -1,0 +1,69 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  background-color: $color-grey-light;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5rem 10rem 0;
+  padding: 2rem 3rem 2rem 8rem;
+  border-radius: 4rem;
+
+  p {
+    font-size: $medium-title-font-size;
+    font-weight: 700;
+    color: $color-grey-dark;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  .buttonCustom {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+    width: 60%;
+    box-shadow: 0 2rem 2rem $color-grey-light;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba($color-grey-dark, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-grey-dark, 0.2);
+      transform: translateY(0px);
+    }
+  }
+
+  img {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    margin: 4rem 0rem 0;
+
+    p {
+      font-size: 2rem;
+    }
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    p {
+      font-size: 1.6rem;
+    }
+
+    padding: 2rem 3rem 2rem 5rem;
+  }
+}

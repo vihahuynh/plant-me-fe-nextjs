@@ -1,0 +1,18 @@
+.sketch-picker {
+  box-shadow: none !important;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  display: none;
+}
+
+.slick-slide:not(.slick-active) {
+  visibility: hidden;
+}
+
+// .slick-slider {
+//   width: 100%;
+
+
+// }

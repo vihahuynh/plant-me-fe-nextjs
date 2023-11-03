@@ -1,0 +1,103 @@
+@import "./../../styles/variable.module.scss";
+
+.formContainer {
+  position: relative;
+
+  h2 {
+    color: $color-primary;
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .inputContainer {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .label {
+      display: block;
+      font-size: $default-font-size;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light;
+      height: 4rem;
+      color: $color-grey;
+      font-family: "Poppins", sans-serif;
+      font-size: $default-font-size;
+      transition: all .3s;
+
+      &:active,
+      &:hover {
+        border: 1px solid $color-primary;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        color: lightgrey;
+        font-size: $default-font-size;
+      }
+    }
+
+    .errors {
+      margin-top: 3px;
+      margin-left: 1.5rem;
+      font-size: $tiny-font-size;
+      color: darkred;
+    }
+
+    .link {
+      text-decoration: underline;
+      text-decoration-color: $color-primary-dark;
+      text-underline-offset: 3px;
+      color: $color-primary-dark;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.btn {
+  align-self: center;
+  border: none;
+  border-radius: 10rem;
+  background-color: $color-primary;
+  color: $color-grey-light;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-size: $default-font-size;
+  cursor: pointer;
+}
+
+.disabledBtn {
+  align-self: center;
+  border: none;
+  border-radius: 10rem;
+  background-color: $color-grey;
+  color: $color-grey-dark;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-size: $default-font-size;
+  cursor: not-allowed;
+}
+
+.url {
+  font-size: $default-font-size;
+  color: $color-primary;
+  // position: absolute;
+  // top: 1rem;
+  // right: 0rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

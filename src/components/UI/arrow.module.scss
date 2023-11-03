@@ -1,0 +1,26 @@
+@import "./../../styles/variable.module.scss";
+
+.nextArrow,
+.prevArrow {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nextArrow {
+  left: -2rem;
+}
+
+.prevArrow {
+  right: 2rem;
+}
+
+.icon {
+  height: 5rem;
+  width: 5rem;
+  fill: $color-primary;
+}

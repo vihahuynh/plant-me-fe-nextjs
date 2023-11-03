@@ -1,0 +1,44 @@
+@import "./../../../../styles/variable.module.scss";
+
+.item {
+  padding: 1rem 0;
+  color: $color-grey-dark;
+  font-size: $default-font-size;
+  border-bottom: 1px solid lightgrey;
+
+  .itemTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.iconGroup {
+  flex-shrink: 0;
+}
+
+.icon {
+  height: 3rem;
+  width: 3rem;
+  transition: all 0.3s;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+.iconBlue {
+  color: deepskyblue;
+
+  &:hover {
+    background-color: deepskyblue;
+    color: white;
+  }
+}
+
+.iconRed {
+  color: darkred;
+
+  &:hover {
+    background-color: darkred;
+    color: white;
+  }
+}

@@ -1,0 +1,16 @@
+@import "./../../../../styles/variable.module.scss";
+
+.container {
+  margin-top: 5rem;
+  width: 100%;
+
+  h5 {
+    color: $color-primary;
+    font-size: 2rem;
+  }
+}
+
+.itemList {
+  list-style: none;
+  margin-bottom: 1rem;
+}

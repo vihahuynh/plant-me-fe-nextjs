@@ -1,0 +1,109 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  display: flex;
+  height: 55vh;
+}
+
+.slider-wrapper {
+  width: 35rem;
+}
+
+.nextArrow,
+.prevArrow {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nextArrow {
+  left: 0;
+}
+
+.prevArrow {
+  right: 2rem;
+}
+
+.icon {
+  height: 5rem;
+  width: 5rem;
+  fill: $color-primary;
+}
+
+.slick-slide-image {
+  width: 95%;
+}
+
+.thumbnail-slider-wrap {
+  width: 10rem;
+  margin-right: 2rem;
+
+  img {
+    border: 2px solid $color-primary;
+  }
+}
+
+.imageModal {
+  height: 90vh;
+}
+
+.largeImg {
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.closeBtn {
+  display: inline-block;
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  top: 2rem;
+  right: 2rem;
+  // background-color: #fff;
+  // border-radius: 50%;
+  // box-shadow: 0 .5rem 1.5rem rgba($color-grey-dark, .2);
+
+  &::after,
+  &::before {
+    display: block;
+    content: "";
+    height: 5px;
+    width: 3rem;
+    color: red;
+    position: absolute;
+    top: 1rem;
+    z-index: 10000;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    height: auto;
+  }
+
+  .slider-wrapper {
+    width: 32rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .slider-wrapper {
+    width: 30rem;
+  }
+
+  .imageModal {
+    height: auto;
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .slider-wrapper {
+    width: 25rem;
+  }
+}

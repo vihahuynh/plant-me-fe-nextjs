@@ -1,0 +1,42 @@
+@import "../../../styles/variable.module.scss";
+
+.searchContainer {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 1.8rem;
+  top: 1.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: $color-primary;
+}
+
+.input {
+  font-size: $default-font-size;
+  color: $color-grey;
+  font-family: "Poppins", sans-serif;
+  height: 4rem;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $color-grey-light;
+  outline: none;
+  padding: 0.7rem 2rem;
+
+  &::placeholder {
+    color: rgba($color-grey, 0.5);
+  }
+}
+
+.square {
+  input {
+    border-radius: 5px;
+  }
+}
+
+.circle {
+  input {
+    border-radius: 10rem;
+  }
+}

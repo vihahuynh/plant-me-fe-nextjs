@@ -1,0 +1,127 @@
+@import "./../../styles/variable.module.scss";
+
+.title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+.statisticContainer {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+
+  .statistic {
+    color: $color-grey;
+
+    &:not(:first-child) {
+      padding-left: 1.5rem;
+    }
+
+    &:not(:last-child) {
+      padding-right: 1.5rem;
+      border-right: 1px solid $color-grey-light;
+    }
+  }
+}
+
+.optionContainer {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .optionTitle {
+    color: $color-primary;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .optionList {
+    list-style: none;
+    display: flex;
+  }
+
+  .sizeItem {
+    color: $color-primary;
+    font-size: $default-font-size;
+    border: 1px solid $color-grey-light;
+    border-radius: 3px;
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .sizeItem.active {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  .colorItem {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10rem;
+    outline-offset: 4px;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  .colorItem.active {
+    outline: 1px solid $color-grey-dark !important;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.unavailable {
+  background-color: $color-grey-light !important;
+  color: lightgray !important;
+  // border-color: $color-grey-dark  !important;
+  cursor: not-allowed !important;
+}
+
+.quantityAvailable {
+  font-size: 1.2rem;
+  color: $color-grey;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: palevioletred;
+}
+
+.viewLightGuide {
+  margin-top: 2rem;
+  font-size: $default-font-size;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: $color-primary-dark;
+  cursor: pointer;
+}
+
+.imageModal {
+  width: 60vw;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .imageModal {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .imageModal {
+    width: 90vw;
+  }
+}

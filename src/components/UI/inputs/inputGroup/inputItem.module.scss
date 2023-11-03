@@ -1,0 +1,92 @@
+@import "./../../../../styles/variable.module.scss";
+
+.formItem {
+  width: 100%;
+
+  //   display: grid;
+  //   grid-template-columns: repeat(16, 1fr);
+  //   column-gap: 3rem;
+  h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: $color-primary;
+    font-size: $default-font-size;
+    margin-bottom: 0.5rem;
+  }
+
+  .inputContainer {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid $color-grey-light;
+    color: $color-grey;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: $default-font-size;
+    transition: all .3s;
+
+    &:active,
+    &:hover {
+      border: 1px solid $color-primary;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      color: lightgrey;
+      font-size: $default-font-size;
+    }
+  }
+
+  input {
+    height: 4rem;
+  }
+
+  textarea,
+  select {
+    outline: none;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .errors {
+    margin-left: 1.5rem;
+    margin-top: 3px;
+    font-size: $tiny-font-size;
+    color: darkred;
+  }
+}
+
+.icon {
+  height: 3rem;
+  width: 3rem;
+  transition: all 0.3s;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+.iconBlue {
+  color: deepskyblue;
+
+  &:hover {
+    background-color: deepskyblue;
+    color: white;
+  }
+}
+
+.iconRed {
+  color: darkred;
+
+  &:hover {
+    background-color: darkred;
+    color: white;
+  }
+}

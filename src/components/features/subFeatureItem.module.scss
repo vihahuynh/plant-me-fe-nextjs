@@ -1,0 +1,50 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+
+  .imgContainer {
+    img {
+      height: 8rem;
+    }
+  }
+
+  .title {
+    color: $color-grey-dark;
+    font-size: $small-title-font-size;
+  }
+
+  .desc {
+    font-size: $tiny-font-size;
+    color: $color-grey;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    width: 49%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .container {
+    .imgContainer {
+      img {
+        height: 6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    width: 100%;
+  }
+}

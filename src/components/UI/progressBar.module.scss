@@ -1,0 +1,26 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: 15rem;
+  background-color: $color-grey-light;
+  height: 7px;
+  border-radius: 10rem;
+
+  .percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: $color-primary;
+    height: 7px;
+    border-radius: 10rem;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .container {
+    width: 10rem;
+  }
+}

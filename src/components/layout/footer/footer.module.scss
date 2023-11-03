@@ -1,0 +1,83 @@
+@import "./../../../styles/variable.module.scss";
+
+.container {
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-primary-light;
+
+  p {
+    font-size: $tiny-font-size;
+    color: $color-grey;
+  }
+
+  .usefulLinksContainer {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .iconContainer {
+    margin-top: 2rem;
+
+    a {
+      margin-right: 2rem;
+      display: inline-block;
+      height: 3rem;
+
+      .icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-primary;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        .icon {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 3rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .container {
+    flex-direction: column;
+    row-gap: 3rem;
+
+    .usefulLinksContainer {
+      width: 100%;
+    }
+
+    .footerLeft {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    padding: 2rem 3rem;
+
+    .iconContainer {
+      a {
+        margin-right: 1rem;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

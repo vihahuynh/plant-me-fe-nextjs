@@ -1,0 +1,26 @@
+@import "./../../styles/variable.module.scss";
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    color: $color-primary;
+    font-size: 4rem;
+    animation: spin 1.5s infinite linear;
+}

@@ -1,0 +1,33 @@
+@import "./../../styles/variable.module.scss";
+
+.container {
+  //   border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  font-size: $default-font-size;
+  color: inherit;
+
+  span {
+    display: inline-block;
+    font-weight: 700;
+    width: 25rem;
+  }
+
+  img {
+    height: 2rem;
+    margin-bottom: 0.5;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .container {
+    span {
+      display: block;
+    }
+  }
+}

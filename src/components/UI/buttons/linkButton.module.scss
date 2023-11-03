@@ -1,0 +1,57 @@
+@import "./../../../styles/variable.module.scss";
+
+.customBtn {
+  display: inline-block;
+  align-self: flex-start;
+  text-decoration: none;
+  color: $color-primary-light;
+  background-color: $color-primary;
+  cursor: pointer;
+}
+
+.square {
+  border-radius: 3px;
+}
+
+.circle {
+  border-radius: 10rem;
+}
+
+.medium {
+  font-size: $default-font-size;
+  padding: 1rem 3rem;
+}
+
+.small {
+  font-size: 1.2rem;
+  padding: 0.7rem 2rem;
+}
+
+.large {
+  font-size: $small-title-font-size;
+  padding: 1.2rem 5rem;
+}
+
+.primary {
+  color: $color-primary-light;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.light {
+  color: $color-primary;
+  background-color: $color-primary-light;
+  border: 1px solid $color-primary;
+}
+
+.red {
+  color: darkred;
+  background-color: #f7edee;
+  border: 1px solid darkred;
+}
+
+.blue {
+  color: deepskyblue;
+  background-color: #ebf6fa;
+  border: 1px solid deepskyblue;
+}

@@ -1,0 +1,197 @@
+@import "../../../styles/variable.module.scss";
+
+.container {
+  background-color: $color-primary-light;
+  height: 100vh;
+  padding: 7rem 4rem 7rem 12rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      line-height: 7rem;
+      font-size: 6rem;
+      font-weight: 400;
+      color: $color-grey-dark;
+
+      span {
+        font-size: inherit;
+        font-weight: 700;
+        color: $color-primary;
+      }
+    }
+
+    p {
+      font-size: 1.7rem;
+      color: $color-grey;
+    }
+  }
+
+  img {
+    height: 85vh;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 3rem rgba($color-grey, 0.3);
+    margin-right: -7rem;
+  }
+
+  .description {
+    margin: 2rem 0;
+  }
+
+  .contact {
+    margin-right: 2rem;
+    list-style: none;
+  }
+
+  .contactItem {
+    transform: rotate(-90deg);
+    font-size: $default-font-size;
+    color: $color-grey;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:not(:first-child) {
+      margin-top: 8rem;
+    }
+
+    &:hover {
+      transform: rotate(-90deg) scale(1.15);
+    }
+  }
+}
+
+.discoverBtn {
+  // display: inline-block;
+  transition: all 0.3s;
+  box-shadow: 0 1rem 2rem rgba($color-grey-dark, 0.2);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba($color-grey-dark, 0.2);
+  }
+}
+
+@media only screen and (max-width: 87.5em) {
+  .container {
+    img {
+      height: 65vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    padding: 4rem 4rem 4rem 12rem;
+    height: 80vh;
+
+    .descriptionContainer {
+      h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+      }
+    }
+
+    img {
+      height: 50vh;
+      border-radius: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .container {
+    position: relative;
+    padding: 4rem;
+    img {
+      height: 45vh;
+      margin-right: 0;
+    }
+
+    .descriptionContainer {
+      align-items: center;
+      margin-right: 0;
+    }
+
+    .contact {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      column-gap: 6rem;
+    }
+
+    .contactItem {
+      transform: rotate(0);
+      margin-top: 0;
+
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  .discoverBtn {
+    width: 100%;
+    text-align: center;
+    // margin-bottom: -4rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    flex-direction: column;
+    height: auto;
+
+    img {
+      margin: 2rem 0;
+      width: 70%;
+      height: auto;
+    }
+
+    .descriptionContainer {
+      h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+
+    .contact {
+      margin-top: 1rem;
+      position: relative;
+      bottom: auto;
+      left: auto;
+      transform: translateX(0);
+      order: 0;
+    }
+  }
+}
+
+// @media only screen and (max-width: 30em) {
+//   .container {
+//     height: auto;
+
+//     .descriptionContainer {
+//       h1 {
+//         font-size: 3rem;
+//         line-height: 4rem;
+//       }
+//     }
+
+//     img {
+//       margin: 2rem 0;
+//       width: 80vw;
+//       height: auto;
+//     }
+//   }
+// }

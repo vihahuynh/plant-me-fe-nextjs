@@ -1,0 +1,83 @@
+@import "./../../../styles/variable.module.scss";
+
+.container {
+  position: relative;
+}
+
+.chosenText {
+  color: $color-grey;
+  font-size: $default-font-size;
+  padding: 0.6rem 0;
+}
+
+.placeholder {
+  color: lightgrey;
+  font-size: $default-font-size;
+  padding: 0.6rem 0;
+}
+
+.dataList {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  color: $color-grey-dark;
+  list-style: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-height: 0;
+}
+
+.dataList.active {
+  max-height: 16rem;
+  overflow-y: scroll;
+}
+
+.dataItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  height: 4rem;
+  padding: 0 2rem;
+  background-color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $color-primary;
+  }
+}
+
+.dataItem.active {
+  color: white;
+  background-color: $color-primary;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-primary-light;
+  }
+}
+
+.optionBox {
+  background-color: white;
+  // border: 1px solid $color-primary;
+  padding: 0.3rem 1.5rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover {
+    border: 1px solid $color-primary;
+  }
+}
+
+.primary {
+  border: 1px solid $color-primary-light;
+}
+
+.light {
+  border: 1px solid $color-primary-light;
+}

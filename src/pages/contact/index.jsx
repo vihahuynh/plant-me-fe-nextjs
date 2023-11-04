@@ -74,6 +74,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.inputContainer}>
                 <input
+                  className={styles.input}
                   type="name"
                   name="name"
                   onChange={handleChange}
@@ -87,6 +88,7 @@ const Contact = () => {
               </div>
               <div className={styles.inputContainer}>
                 <input
+                  className={styles.input}
                   type="email"
                   name="email"
                   onChange={handleChange}
@@ -100,6 +102,7 @@ const Contact = () => {
               </div>
               <div className={styles.inputContainer}>
                 <textarea
+                  className={styles.textarea}
                   rows={6}
                   type="text"
                   name="content"

@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { Formik } from "formik";
 import Link from "next/link";
 
-import { loginService } from "../../services";
-import { authenticationActions } from "../../store";
+import { loginService } from "@/services";
+import { authenticationActions } from "@/store";
 
 import styles from "./signInForm.module.scss";
 

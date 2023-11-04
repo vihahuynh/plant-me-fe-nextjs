@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { alertActions, authenticationActions } from "../../store";
-import { Button, LinkButton } from "../../components";
+import { alertActions, authenticationActions } from "@/store";
+import { Button, LinkButton } from "@/components";
 
-import { userService } from "../../services";
+import { userService } from "@/services";
 
 import styles from "./subcribe.module.scss";
 

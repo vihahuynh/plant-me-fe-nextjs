@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-import { CheckBox, RadioInput } from "../../../components";
+import { CheckBox, RadioInput } from "@/components";
 
 import styles from "./dropdownMenu.module.scss";
 

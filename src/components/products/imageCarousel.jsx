@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Slider from "react-slick";
 
-import { Arrow, Modal } from "../../components";
+import { Arrow, Modal } from "@/components";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

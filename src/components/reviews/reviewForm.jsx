@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { Button } from "./../../components";
+import { Button } from "@/components";
 
 import styles from "./reviewForm.module.scss";
 

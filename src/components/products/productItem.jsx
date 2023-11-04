@@ -5,10 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { BsSuitHeart, BsSuitHeartFill } from "react-icons/bs/index";
 
-import { authenticationActions } from "../../store";
-import { Price, SignInForm, Modal } from "./../../components";
+import { authenticationActions } from "@/store";
+import { Price, SignInForm, Modal } from "@/components";
 
-import { userService } from "../../services";
+import { userService } from "@/services";
 
 import styles from "./productItem.module.scss";
 

@@ -1,5 +1,5 @@
-import { categoriesBanners } from "./../../data";
-import { CategoriesBannerItem } from "./../../components";
+import { categoriesBanners } from "@/data";
+import { CategoriesBannerItem } from "@/components";
 
 import styles from "./categoriesBanners.module.scss";
 

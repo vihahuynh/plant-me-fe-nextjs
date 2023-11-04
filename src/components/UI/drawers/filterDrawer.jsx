@@ -5,7 +5,7 @@ import { TbFilter } from "react-icons/tb/index";
 import { VscChromeClose } from "react-icons/vsc/index";
 import Drawer from "@mui/material/Drawer";
 
-import { DropdownMenu } from "./../../../components";
+import { DropdownMenu } from "@/components";
 
 import styles from "./filterDrawer.module.scss";
 

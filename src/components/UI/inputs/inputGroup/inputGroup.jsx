@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GroupItem, InputItem, Button } from "./../../../../components";
+import { GroupItem, InputItem, Button } from "@/components";
 
 import styles from "./inputGroup.module.scss";
 

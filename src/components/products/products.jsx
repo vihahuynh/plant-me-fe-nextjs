@@ -1,6 +1,6 @@
 import styles from "./products.module.scss";
 
-import { ProductItem } from "./../../components";
+import { ProductItem } from "@/components";
 
 export const Products = ({ products }) => {
   return (

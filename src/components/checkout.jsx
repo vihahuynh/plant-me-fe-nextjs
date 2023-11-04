@@ -11,11 +11,11 @@ import {
   LinkButton,
   RadioInput,
   BankCard,
-} from "../../components";
+} from "@/components";
 
-import { alertActions, cartActions } from "../../store";
+import { alertActions, cartActions } from "@/store";
 
-import { clearCheckoutItems } from "../../store/cartSlice";
+import { clearCheckoutItems } from "@/store/cartSlice";
 
 import {
   stockService,
@@ -23,7 +23,7 @@ import {
   addressService,
   orderService,
   guestOrderService,
-} from "../../services";
+} from "@/services";
 
 import styles from "./checkout.module.scss";
 

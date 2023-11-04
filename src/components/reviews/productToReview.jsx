@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { useSelector } from "react-redux";
 
 import Rating from "@mui/material/Rating";
-import { ReviewForm, Modal } from "./../../components";
+import { ReviewForm, Modal } from "@/components";
 
-import { reviewService } from "../../services";
+import { reviewService } from "@/services";
 
 import styles from "./productToReview.module.scss";
 import "slick-carousel/slick/slick.css";

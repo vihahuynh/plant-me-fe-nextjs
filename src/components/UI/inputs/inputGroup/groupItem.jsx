@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { TbTrash, TbEdit } from "react-icons/tb/index";
-import { InputItem } from "./../../../../components";
+import { InputItem } from "@/components";
 
 import styles from "./groupItem.module.scss";
 

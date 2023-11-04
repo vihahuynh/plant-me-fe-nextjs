@@ -10,14 +10,14 @@ import {
   whereToGrowList,
   specialFeaturesList,
   typeOfPlantsList,
-} from "./../../data";
+} from "@/data";
 
-import { InputGroup, SelectInput } from "../../components";
+import { InputGroup, SelectInput } from "@/components";
 
-import { productService } from "../../services";
+import { productService } from "@/services";
 
 import styles from "./newProductForm.module.scss";
-import "./../../styles/custom.module.scss";
+import "@/styles/custom.module.scss";
 
 export const NewProductForm = () => {
   const authen = useSelector((state) => state.authentication);

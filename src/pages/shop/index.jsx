@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { plantsFilterOptions, plantsSortOptions } from "../../data";
+import { plantsFilterOptions, plantsSortOptions } from "@/data";
 
 import {
   Products,
@@ -8,8 +8,8 @@ import {
   SortDrawer,
   FilterDrawer,
   Loading,
-} from "../../components";
-import { productService } from "../../services";
+} from "@/components";
+import { productService } from "@/services";
 
 import styles from "./shop.module.scss";
 

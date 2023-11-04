@@ -12,13 +12,13 @@ import {
   whereToGrowList,
   specialFeaturesList,
   typeOfPlantsList,
-} from "./../../data";
+} from "@/data";
 
-import { productService } from "../../services";
-import { InputGroup, Stocks, SelectInput, InfoBox } from "../../components";
+import { productService } from "@/services";
+import { InputGroup, Stocks, SelectInput, InfoBox } from "@/components";
 
 import styles from "./productUpdateForm.module.scss";
-import "./../../styles/custom.module.scss";
+import "@/styles/custom.module.scss";
 
 export const UpdateProductForm = () => {
   const router = useRouter();

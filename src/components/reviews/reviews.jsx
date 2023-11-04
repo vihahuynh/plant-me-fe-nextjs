@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Rating } from "@mui/material";
 
-import { reviewsSortOptions, reviewsFilterOptions } from "./../../data";
+import { reviewsSortOptions, reviewsFilterOptions } from "@/data";
 import {
   ReviewItem,
   SortDrawer,
   FilterDrawer,
   ProgressBar,
   Pagination,
-} from "./../../components";
+} from "@/components";
 
-import { reviewService } from "../../services";
+import { reviewService } from "@/services";
 
 import styles from "./reviews.module.scss";
 

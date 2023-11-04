@@ -10,9 +10,9 @@ import {
   ProductInfo,
   Loading,
   InfoBox,
-} from "../../../components";
+} from "@/components";
 
-import { productService } from "../../../services";
+import { productService } from "@/services";
 
 const ProductDetails = () => {
   const router = useRouter();

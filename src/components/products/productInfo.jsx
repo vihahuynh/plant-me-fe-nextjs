@@ -2,9 +2,9 @@ import { CgArrowLongRight } from "react-icons/cg/index";
 import { TbSun, TbTree, TbDroplet, TbGrowth } from "react-icons/tb/index";
 import { HiOutlineSparkles } from "react-icons/hi";
 
-import { plantNotes } from "../../data";
+import { plantNotes } from "@/data";
 
-import { Accordion } from "../../components/../components";
+import { Accordion } from "@/components";
 
 import styles from "./productInfo.module.scss";
 

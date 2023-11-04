@@ -4,14 +4,10 @@ import ReactDOM from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { TbTrash } from "react-icons/tb/index";
-import {
-  removeItem,
-  updateItem,
-  toggleCheckoutAll,
-} from "../../store/cartSlice";
-import { stockService } from "./../../services";
-import { cartActions } from "../../store";
-import { Price, QuantityInput, CheckBox, Modal } from "./../../components";
+import { removeItem, updateItem, toggleCheckoutAll } from "@/store/cartSlice";
+import { stockService } from "@/services";
+import { cartActions } from "@/store";
+import { Price, QuantityInput, CheckBox, Modal } from "@/components";
 
 export const CartItem = ({
   item,

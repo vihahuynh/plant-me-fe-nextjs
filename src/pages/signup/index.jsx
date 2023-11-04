@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Formik } from "formik";
-import { userService } from "../../services";
+import { userService } from "@/services";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

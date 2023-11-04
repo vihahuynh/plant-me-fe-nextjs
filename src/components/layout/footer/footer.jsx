@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { helpLinks, categoryLinks, supportLinks } from "./../../../data";
+import { helpLinks, categoryLinks, supportLinks } from "@/data";
 
 import { ImInstagram, ImFacebook2 } from "react-icons/im";
 
-import { Copyright, UsefulLinks, Logo } from "./../../../components";
+import { Copyright, UsefulLinks, Logo } from "@/components";
 
 import styles from "./footer.module.scss";
 

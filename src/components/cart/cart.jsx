@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { TbTrash } from "react-icons/tb/index";
 
-import { alertActions, authenticationActions, cartActions } from "../../store";
-import { updateItem, toggleCheckoutAll, clear } from "../../store/cartSlice";
+import { alertActions, authenticationActions, cartActions } from "@/store";
+import { updateItem, toggleCheckoutAll, clear } from "@/store/cartSlice";
 
-import { CartItem, CheckBox, Modal, SignInForm } from "./../../components";
+import { CartItem, CheckBox, Modal, SignInForm } from "@/components";
 
 import styles from "./cart.module.scss";
 

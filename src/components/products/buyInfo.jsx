@@ -3,16 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import ReactDOM from "react-dom";
 import Rating from "@mui/material/Rating";
 
-import { addItem } from "../../store/cartSlice";
-import { alertActions, cartActions } from "./../../store";
+import { addItem } from "@/store/cartSlice";
+import { alertActions, cartActions } from "@/store";
 
-import {
-  Price,
-  Button,
-  QuantityInput,
-  Modal,
-  SignInForm,
-} from "./../../components";
+import { Price, Button, QuantityInput, Modal, SignInForm } from "@/components";
 
 import styles from "./buyInfo.module.scss";
 

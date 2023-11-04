@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import ReactDOM from "react-dom";
 import { CgCheckO } from "react-icons/cg";
 
-import { AddressForm, Modal, Button } from "./../../components";
-import { addressService } from "../../services";
+import { AddressForm, Modal, Button } from "@/components";
+import { addressService } from "@/services";
 
 import styles from "./addressItem.module.scss";
 

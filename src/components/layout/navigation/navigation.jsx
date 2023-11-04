@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import { BiUserCircle } from "react-icons/bi/index";
 import { BiCartAlt } from "react-icons/bi/index";
 
-import { authenticationActions, cartActions } from "../../../store";
-import { NavigationItem, Logo, LinkButton } from "./../../../components";
+import { authenticationActions, cartActions } from "@/store";
+import { NavigationItem, Logo, LinkButton } from "@/components";
 
 import styles from "./navigation.module.scss";
 

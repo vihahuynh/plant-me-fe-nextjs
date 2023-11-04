@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
-import { cartService } from "./../services";
+import { cartService } from "@/services";
 
 const initCartState = {
   id: null,

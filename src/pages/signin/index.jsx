@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Formik } from "formik";
-import { authenticationActions } from "../../store/index";
+import { authenticationActions } from "@/store/index";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { loginService } from "../../services";
+import { loginService } from "@/services";
 
 import styles from "./signInSignUp.module.scss";
 

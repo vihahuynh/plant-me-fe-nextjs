@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 
 import styles from "./cartSummary.module.scss";
 
-import { Button, LinkButton } from "./../../components";
+import { Button, LinkButton } from "@/components";
 
-import { addressService, locationService } from "../../services";
+import { addressService, locationService } from "@/services";
 
 export const CartSummary = ({ title, onClick, disabled = false }) => {
   const cart = useSelector((state) => state.cart);

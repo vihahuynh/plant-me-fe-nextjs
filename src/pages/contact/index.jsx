@@ -1,9 +1,9 @@
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { alertActions } from "../../store";
-import { Button } from "../../components";
+import { alertActions } from "@/store";
+import { Button } from "@/components";
 
-import { emailService } from "../../services";
+import { emailService } from "@/services";
 
 import styles from "./contact.module.scss";
 

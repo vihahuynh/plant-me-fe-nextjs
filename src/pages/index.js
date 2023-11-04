@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
-import {
-  Header,
-  Categories,
-  Features,
-  Wrapper,
-  Products,
-} from "./../components";
-import { productService } from "../services";
+import { Header, Categories, Features, Wrapper, Products } from "@/components";
+import { productService } from "@/services";
 import styles from "./home.module.scss";
 
 const Home = () => {

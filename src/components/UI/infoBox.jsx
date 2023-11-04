@@ -1,4 +1,4 @@
-import { LinkButton } from "./../../components";
+import { LinkButton } from "@/components";
 import styles from "./infoBox.module.scss";
 
 export const InfoBox = ({ text, btnText, url, theme = "primary" }) => {

@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 
-import { updateItem } from "../../store/cartSlice";
-import { alertActions, cartActions } from "../../store";
-import { cartService, stockService } from "../../services";
+import { updateItem } from "@/store/cartSlice";
+import { alertActions, cartActions } from "@/store";
+import { cartService, stockService } from "@/services";
 
 import {
   Cart,
@@ -14,7 +14,7 @@ import {
   InfoBox,
   Modal,
   SignInForm,
-} from "../../components";
+} from "@/components";
 
 import styles from "./cart.module.scss";
 

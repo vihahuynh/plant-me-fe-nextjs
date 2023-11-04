@@ -1,5 +1,5 @@
-import { mainFeatures, subFeatures } from "../../data";
-import { MainFeatureItem, SubFeatureItem, Subcribe } from "./../../components";
+import { mainFeatures, subFeatures } from "@/data";
+import { MainFeatureItem, SubFeatureItem, Subcribe } from "@/components";
 
 import styles from "./features.module.scss";
 

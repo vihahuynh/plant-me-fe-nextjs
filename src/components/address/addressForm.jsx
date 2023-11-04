@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Formik } from "formik";
 import { useSelector } from "react-redux";
 
-import { Button, SelectInput } from "./../../components";
+import { Button, SelectInput } from "@/components";
 
-import { addressService, locationService } from "../../services";
+import { addressService, locationService } from "@/services";
 
 import styles from "./addressForm.module.scss";
 

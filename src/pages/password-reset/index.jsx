@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 
-import { LinkButton } from "../../components";
+import { LinkButton } from "@/components";
 
-import { passwordResetService } from "../../services";
+import { passwordResetService } from "@/services";
 
-import styles from "./../signin/signInSignUp.module.scss";
+import styles from "@/signin/signInSignUp.module.scss";
 
 const SendPasswordResetLink = () => {
   const [error, setError] = useState("");

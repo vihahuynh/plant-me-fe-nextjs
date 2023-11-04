@@ -8,8 +8,8 @@ import Moment from "react-moment";
 
 import { AiFillLike, AiOutlineLike } from "react-icons/ai/index";
 
-import { reviewService, userService } from "../../services";
-import { authenticationActions } from "./../../store";
+import { reviewService, userService } from "@/services";
+import { authenticationActions } from "@/store";
 
 export const ReviewItem = ({ review }) => {
   const authen = useSelector((state) => state.authentication);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { LinkButton, Button } from "./../../components";
-import { productService } from "../../services";
+import { LinkButton, Button } from "@/components";
+import { productService } from "@/services";
 
 import styles from "./productsTable.module.scss";
 

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { AddressItem, AddressForm, Button } from "../../../components";
+import { AddressItem, AddressForm, Button } from "@/components";
 
-import { addressService } from "./../../../services";
+import { addressService } from "@/services";
 
 import styles from "./changeDeliveryAddress.module.scss";
 

@@ -1,0 +1,66 @@
+@import "./../../../styles/variable.module.scss";
+
+.main {
+  background-color: $color-primary-light;
+  padding: 5rem 10rem;
+  display: flex;
+  column-gap: 4rem;
+  min-height: 70vh;
+}
+
+.container {
+  font-size: $default-font-size;
+  width: 80%;
+
+  h3 {
+    // margin-left: 2rem;
+    font-size: 2.5rem;
+    color: $color-primary;
+  }
+}
+
+.reviewsList {
+  margin-top: 1.5rem;
+}
+
+.allReviews {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.btnContainers {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .btn {
+    display: inline-block;
+  }
+}
+
+.infoText {
+  font-size: $default-font-size;
+  color: $color-grey-dark;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main {
+    padding: 5rem;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .main {
+    padding: 3rem;
+  }
+}

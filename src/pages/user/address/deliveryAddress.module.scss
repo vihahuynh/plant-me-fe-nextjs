@@ -1,0 +1,32 @@
+@import "./../../../styles/variable.module.scss";
+
+.main {
+  padding: 5rem 10rem;
+  background-color: $color-primary-light;
+  display: flex;
+  column-gap: 4rem;
+  min-height: 70vh;
+}
+
+.leftContainer {
+  flex: 1;
+}
+
+.addressList {
+  margin-top: 2rem;
+  list-style: none;
+  font-size: $default-font-size;
+  color: $color-grey-dark;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main {
+    padding: 5rem;
+  }
+}
+
+@media only screen and (max-width: 37.25em) {
+  .main {
+    padding: 2rem;
+  }
+}

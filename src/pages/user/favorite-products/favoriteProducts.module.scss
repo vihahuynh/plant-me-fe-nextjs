@@ -1,0 +1,21 @@
+@import "./../../../styles/variable.module.scss";
+
+.main {
+  margin: 5rem 10rem;
+  display: flex;
+  column-gap: 4rem;
+  min-height: 70vh;
+
+  @media only screen and (max-width: 56.25rem) {
+    margin: 5rem;
+  }
+
+  @media only screen and (max-width: 37.25em) {
+    margin: 3rem;
+  }
+}
+
+.infoText {
+  font-size: $default-font-size;
+  color: $color-grey-dark;
+}

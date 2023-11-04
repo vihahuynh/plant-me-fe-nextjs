@@ -1,0 +1,51 @@
+@import "./../../../styles/variable.module.scss";
+
+.main {
+  padding: 5rem 10rem;
+  display: flex;
+  column-gap: 4rem;
+  background-color: $color-primary-light;
+  min-height: 70vh;
+
+  @media only screen and (max-width: 56.25rem) {
+    padding: 5rem;
+  }
+
+  @media only screen and (max-width: 37.25em) {
+    padding: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 2rem;
+  // background-color: $color-primary-light;
+}
+
+.ordersList {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    color: $color-primary;
+  }
+
+  .btnContainers {
+    // align-self: flex-end;
+
+    .btn {
+      display: inline-block;
+    }
+  }
+}
+
+.infoText {
+  font-size: $default-font-size;
+  color: $color-grey-dark;
+}

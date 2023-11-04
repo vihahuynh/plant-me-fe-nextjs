@@ -12,7 +12,8 @@ import styles from "./filterDrawer.module.scss";
 export const FilterDrawer = ({ filterOptions }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  const queries = window.location.search.slice(1);
+  const queries = [];
+  // const queries = window.location.search.slice(1);
 
   const onClearAll = () => {
     router.push({ search: "" });

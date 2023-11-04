@@ -10,7 +10,8 @@ export const SortDrawer = ({ sortOptions }) => {
   const [open, setOpen] = useState(false);
   const [sort, setSort] = useState(null);
   const router = useRouter();
-  const queries = window.location.search.slice(1).split("&");
+  const queries = [];
+  // const queries = window.location.search.slice(1).split("&");
 
   useEffect(() => {
     const curSort = queries.find((q) => q.includes("sortBy"));

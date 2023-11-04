@@ -16,7 +16,8 @@ export const Pagination = ({
   theme = "primary",
 }) => {
   const router = useRouter();
-  const queries = window.location.search.slice(1);
+  const queries = "";
+  // const queries = window.location.search.slice(1);
   const otherQueries = queries
     .split("&")
     .filter((q) => !q.includes("skip") && !q.includes("limit"))

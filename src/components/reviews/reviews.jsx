@@ -20,7 +20,8 @@ export const Reviews = ({ productId }) => {
   const [filterReviews, setFilterReviews] = useState([]);
   const [reviews, setReviews] = useState([]);
 
-  const queries = window.location.search.slice(1);
+  const queries = "";
+  // const queries = window.location.search.slice(1);
   const otherQueries = queries
     .split("&")
     .filter((q) => !q.includes("skip") && !q.includes("limit"))

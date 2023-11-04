@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/stocks";
+const baseUrl = "http://localhost:3001/api/stocks";
 
 const getAll = (query) => {
   return axios.get(`${baseUrl}?${query}`);

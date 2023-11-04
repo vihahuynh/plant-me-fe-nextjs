@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/carts";
+const baseUrl = "http://localhost:3001/api/carts";
 
 const get = (id, token) => {
   return axios.get(`${baseUrl}/${id}`, {

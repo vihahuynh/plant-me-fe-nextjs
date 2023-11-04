@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/addresses";
+const baseUrl = "http://localhost:3001/api/addresses";
 
 // get all addresses of specific user
 const getAll = (token) => {

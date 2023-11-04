@@ -1,7 +1,7 @@
 import axios from "axios";
 // import jwt from "jsonwebtoken"
 
-const baseUrl = "/api/login";
+const baseUrl = "http://localhost:3001/api/login";
 
 const login = (data) => {
   return axios.post(baseUrl, data);

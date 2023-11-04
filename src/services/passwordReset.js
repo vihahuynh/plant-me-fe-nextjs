@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/password-reset";
+const baseUrl = "http://localhost:3001/api/password-reset";
 
 const sendLink = (object) => {
   return axios.post(baseUrl, object);

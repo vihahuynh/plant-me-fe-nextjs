@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/notification";
+const baseUrl = "http://localhost:3001/api/notification";
 
 const getAll = (query, token) => {
   return axios.get(`${baseUrl}?${query}`, {

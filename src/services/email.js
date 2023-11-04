@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/api/email";
+const baseUrl = "http://localhost:3001/api/email";
 
 const sendEmail = (email) => {
   return axios.post(baseUrl, email);

@@ -13,20 +13,15 @@ import {
 import { reviewService } from "@/services";
 
 import styles from "./reviews.module.scss";
+import { useGetQueries } from "@/hooks";
 
-export const Reviews = ({ productId }) => {
+export const Reviews = ({ productId, isShowFilter = true }) => {
   const [page, setPage] = useState(1);
   const [allReviews, setAllReviews] = useState([]);
   const [filterReviews, setFilterReviews] = useState([]);
   const [reviews, setReviews] = useState([]);
 
-  const queries = "";
-  // const queries = window.location.search.slice(1);
-  const otherQueries = queries
-    .split("&")
-    .filter((q) => !q.includes("skip") && !q.includes("limit"))
-    .join("&");
-
+  const [queries, otherQueries] = useGetQueries();
   useEffect(() => {
     const fetchData = async () => {
       const reviewsData = await reviewService.getAll(`product=${productId}`);
@@ -95,7 +90,7 @@ export const Reviews = ({ productId }) => {
           </ul>
         </div>
 
-        {!!allReviews.length && (
+        {isShowFilter && !!allReviews.length && (
           <div className={styles.btnContainers}>
             <div className={styles.btn}>
               <SortDrawer sortOptions={reviewsSortOptions} />

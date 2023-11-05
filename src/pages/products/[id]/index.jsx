@@ -57,7 +57,7 @@ const ProductDetails = () => {
           <ProductInfo product={product} />
         </div>
         <div className={styles.reviews}>
-          <Reviews productId={product.id} />
+          <Reviews productId={product.id} isShowFilter={false} />
         </div>
         <div className={styles.features}>
           <h2>Why People Choose Us?</h2>

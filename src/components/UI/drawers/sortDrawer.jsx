@@ -5,26 +5,26 @@ import styles from "./sortDrawer.module.scss";
 import { VscChromeClose } from "react-icons/vsc/index";
 import { TbArrowsSort } from "react-icons/tb/index";
 import { useRouter } from "next/router";
+import { useGetQueries } from "@/hooks";
+import { getQueryString } from "@/utils";
 
 export const SortDrawer = ({ sortOptions }) => {
   const [open, setOpen] = useState(false);
   const [sort, setSort] = useState(null);
   const router = useRouter();
-  const queries = [];
-  // const queries = window.location.search.slice(1).split("&");
+
+  const [queries] = useGetQueries();
 
   useEffect(() => {
-    const curSort = queries.find((q) => q.includes("sortBy"));
+    const curSort = queries.sortBy ? `sortBy=${queries.sortBy}` : "";
     setSort(curSort);
   }, [queries]);
 
   const onAddFilters = (query) => {
-    let newQueries = [...queries];
-    newQueries = newQueries.filter((f) => !f.includes("sortBy"));
-    newQueries = newQueries.concat(query);
-    newQueries = newQueries.filter((f) => f !== "");
+    const newQueries = { ...queries, sortBy: query.split("=")[1] };
+    const newQueriesStr = getQueryString(newQueries);
     router.push({
-      search: `?${newQueries.join("&")}`,
+      search: `?${newQueriesStr}`,
     });
   };
 

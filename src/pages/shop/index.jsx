@@ -8,24 +8,19 @@ import {
   SortDrawer,
   FilterDrawer,
   Loading,
+  InfoBox,
 } from "@/components";
 import { productService } from "@/services";
 
 import styles from "./shop.module.scss";
+import { useGetQueries } from "@/hooks";
 
 const Shop = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const [page, setPage] = useState(1);
-  let queries = "skip=0&limit=12";
-  // if (window !== undefined) {
-  //   queries = window?.location?.search?.slice(1);
-  // }
-  const otherQueries = queries
-    .split("&")
-    .filter((q) => !q.includes("skip") && !q.includes("limit"))
-    .join("&");
+  const [queries, otherQueries, queriesStr] = useGetQueries();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,8 +37,8 @@ const Shop = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (queries.includes("skip") && queries.includes("limit")) {
-          const productsData = await productService.getAll(queries);
+        if (queries.skip && queries.limit) {
+          const productsData = await productService.getAll(queriesStr);
           setProducts(productsData.data);
         }
       } catch (err) {
@@ -61,7 +56,6 @@ const Shop = () => {
 
   return (
     <>
-      {/* <ScrollToTop locationY={0} /> */}
       <div className={styles.container}>
         <div className={styles.btnContainers}>
           <div className={styles.btn}>
@@ -74,12 +68,16 @@ const Shop = () => {
       </div>
       <div className={styles.container}>
         <Products products={products} />
-        <Pagination
-          page={page}
-          setPage={setPage}
-          totalPages={Math.ceil(filterProducts.length / 12)}
-          itemsPerPage={12}
-        />
+        {filterProducts.length ? (
+          <Pagination
+            page={page}
+            setPage={setPage}
+            totalPages={Math.ceil(filterProducts.length / 12)}
+            itemsPerPage={12}
+          />
+        ) : (
+          <InfoBox text="No product match the filter, please update the filter" />
+        )}
       </div>
     </>
   );

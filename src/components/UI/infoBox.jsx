@@ -10,12 +10,14 @@ export const InfoBox = ({ text, btnText, url, theme = "primary" }) => {
       <div className={classNames}>
         <img src="./images/logo.png" alt="logo" />
         <p>{text}</p>
-        <LinkButton
-          text={btnText}
-          size="medium"
-          url={url}
-          className={styles.btn}
-        />
+        {btnText && url ? (
+          <LinkButton
+            text={btnText}
+            size="medium"
+            url={url}
+            className={styles.btn}
+          />
+        ) : null}
       </div>
     </div>
   );

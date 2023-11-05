@@ -7,6 +7,7 @@ import {
   MdOutlineLastPage,
   MdOutlineFirstPage,
 } from "react-icons/md";
+import { useGetQueries } from "@/hooks";
 
 export const Pagination = ({
   page,
@@ -15,22 +16,11 @@ export const Pagination = ({
   itemsPerPage,
   theme = "primary",
 }) => {
+  const [queries, otherQueries] = useGetQueries();
   const router = useRouter();
-  const queries = "";
-  // const queries = window.location.search.slice(1);
-  const otherQueries = queries
-    .split("&")
-    .filter((q) => !q.includes("skip") && !q.includes("limit"))
-    .join("&");
 
-  const limit = queries
-    .split("&")
-    .find((q) => q.includes("limit"))
-    ?.split("=")?.[1];
-  const skip = queries
-    .split("&")
-    .find((q) => q.includes("skip"))
-    ?.split("=")?.[1];
+  const { limit, skip } = queries;
+
   const curPage = +skip / +limit + 1;
 
   useEffect(() => {
@@ -40,14 +30,14 @@ export const Pagination = ({
   }, [curPage, page, setPage]);
 
   useEffect(() => {
-    if (!queries.includes("skip") && !queries.includes("limit")) {
+    if (!queries.skip && !queries.limit) {
       router.push({
         search: `skip=${(page - 1) * itemsPerPage}&limit=${itemsPerPage}${
           otherQueries ? `&${otherQueries}` : ""
         }`,
       });
     }
-  }, [queries, router, itemsPerPage, page, otherQueries]);
+  }, [queries, itemsPerPage, page, otherQueries]);
 
   const onNext = () => {
     setPage((curPage) => {

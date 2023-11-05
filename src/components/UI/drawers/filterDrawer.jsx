@@ -8,15 +8,15 @@ import Drawer from "@mui/material/Drawer";
 import { DropdownMenu } from "@/components";
 
 import styles from "./filterDrawer.module.scss";
+import { useGetQueries } from "@/hooks";
 
 export const FilterDrawer = ({ filterOptions }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  const queries = [];
-  // const queries = window.location.search.slice(1);
+  const [queries, _, queriesStr] = useGetQueries();
 
   const onClearAll = () => {
-    router.push({ search: "" });
+    router.push({ search: queriesStr });
   };
 
   return (

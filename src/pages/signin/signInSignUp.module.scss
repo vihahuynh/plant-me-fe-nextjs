@@ -51,6 +51,8 @@
       font-family: "Poppins", sans-serif;
       font-size: $default-font-size;
       transition: all 0.3s;
+      outline: none;
+      padding: 0.7rem 1.5rem;
 
       &:active,
       &:hover {
